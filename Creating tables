@@ -1,0 +1,69 @@
+Create Scripts.sql
+create table bank( bank_id int primary key
+				 , bank_name varchar(255)
+				 , bank_branch varchar(255)
+				 );
+create table customer_type( cust_type_code varchar(150) primary key
+					, cust_type_desc varchar(255)
+					);
+create table customer( cust_id int primary key
+					, cust_ssn varchar(255)
+					, cust_first_name varchar(255)
+					, cust_last_name varchar(255)
+					, cust_email varchar(255)
+					, cust_address varchar(255)
+					, cust_street varchar(255)
+					, cust_city varchar(255)
+					, cust_state varchar(255)
+					, cust_zipcode int
+					, cust_start_date date
+					, cust_credit_score int
+					, cust_dob date
+					, cust_age AS (DATEDIFF(year, cust_dob, GETDATE()) )
+					, cust_type_code varchar(150) FOREIGN KEY REFERENCES customer_type(cust_type_code)
+					, bank_id int FOREIGN key references bank( bank_id)
+					);
+create table customer_phones(cust_phone_id int primary key
+							, cust_phone_number int
+							, phone_purpose varchar(255)
+							, cust_id int FOREIGN key references customer( cust_id)
+							);
+create table account( acct_id int primary key
+					, acct_bal float
+					, acct_start_date date
+					, acct_fee float
+					, acct_type varchar(10)
+					, cust_id int FOREIGN key references customer( cust_id)
+					, bank_id int FOREIGN key references bank( bank_id)
+					);
+create table loan( loan_id int primary key
+					, loan_amt int
+					, maturity_date date
+					, loan_balance int
+					, loan_int int
+					, acct_id int FOREIGN key references account(acct_id)
+					);
+create table credit_card( cc_num int primary key
+					, cc_limit float
+					, cc_balance float
+					, cc_payment_due float
+					, acct_id int FOREIGN key references account(acct_id)
+					);
+create table investment_serv( invst_id int primary key
+					, invst_type varchar(255)
+					, invst_amt float
+					, invst_date date
+					, min_amount float
+					, time_frame int
+					, acct_id int FOREIGN key references account(acct_id)
+					);
+create table transaction_types( txn_type_code int primary key
+					, txn_type_desc varchar(255)
+					);
+create table transactions( txn_id int primary key
+					, txn_amt float
+					, txn_date date
+					, txn_fee float
+					, acct_id int FOREIGN key references account(acct_id)
+					, txn_type_code int FOREIGN key references transaction_types( txn_type_code)
+					);
