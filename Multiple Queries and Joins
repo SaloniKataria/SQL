@@ -1,0 +1,164 @@
+ReportQueries.sql
+select dept_name, sum(budget)
+from department
+group by dept_name;
+having sum(budget) between 90000 and 100000;
+
+select dept_name, budget
+from department
+order by dept_name
+
+
+SELECT dt.dept_name , dt.budget
+FROM department dt
+INNER JOIN
+    (SELECT MAX(budget) AS MaxBudget
+    FROM department) maxbd 
+ON dt.budget = maxbd.MaxBudget
+
+
+SELECT dt.dept_name , dt.budget
+FROM department dt
+INNER JOIN
+    (SELECT MIN(budget) AS MinBudget
+    FROM department) minbd 
+ON dt.budget = minbd.MinBudget
+
+
+SELECT dt.dept_name as Max_Dept , dt.budget as Max_Budget
+FROM department dt
+INNER JOIN
+    (SELECT MAX(budget) AS MaxBudget
+    FROM department) maxbd 
+ON dt.budget = maxbd.MaxBudget
+
+select sum(budget)
+from department
+
+
+select year(DateofJoining) as YEAR, count(ID)
+from instructor
+group by year(DateofJoining)
+order by year(DateofJoining);
+
+
+select year(DateofJoining) as YEAR, count(ID)
+from student
+group by year(DateofJoining)
+order by year(DateofJoining);
+
+
+select distinct semester, year
+from section
+
+select sec.building 
+	, sec.room_number
+	, c.title
+	, c.course_id 
+	, CASE WHEN cp.course_id = c.course_id
+		 THEN  NULL
+		 ELSE  cp.title 
+		 END AS Prerequisite_title
+	, CASE WHEN cp.course_id = c.course_id
+		 THEN NULL
+		 ELSE cp.course_id 
+		 END AS Prerequisite_Course
+	 , ts.day 
+	 , ts.start_time
+	 , ts.end_time
+from section sec, course c , time_slot ts, course cp
+where semester = 'SEM2'
+and sec.course_id = c.course_id
+and cp.course_id = c.prereq_id
+and sec.time_slot_id = ts.time_slot_id
+
+
+select title , course_id from course;
+
+select s.id, s.name, s.tot_cred, i.name as advisor, c.title, c.course_id , ss.grade
+from student_section ss,
+student s,
+section sec,
+course c,
+instructor i
+where s.ID = ss.student_id
+and ss.sec_id = sec.sec_id
+and sec.course_id = c.course_id
+and s.advisor_id = i.id
+and c.course_id = 8888;
+
+select * from course
+where course_id = 9999
+select * from section
+where course_id = 9999
+select * from student_section
+where sec_id = 34522
+select * from student
+where ID = 88
+select * from instructor
+where id = 777
+
+
+select ss.grade, count(s.id)
+from student_section ss,
+student s
+where ss.student_id = s.id
+group by grade
+
+select s.*
+from student s, student_section ss
+where ss.student_id = s.id
+and ss.grade = 'B+'
+
+select distinct semester from section
+
+select distinct s.ID, s.name, s.dept_name, s.tot_cred, i.name as advisor, ss.sec_id
+from student s, 
+student_section ss,
+section sec,
+instructor i
+where s.id = ss.student_id
+and sec.sec_id = ss.sec_id
+and s.advisor_id = i.ID
+and sec.semester = 'SEM1'
+
+select distinct s.ID, s.name, s.dept_name, s.tot_cred, i.name as advisor, ss.sec_id
+from student s, 
+student_section ss,
+section sec,
+instructor i
+where s.id = ss.student_id
+and sec.sec_id = ss.sec_id
+and s.advisor_id = i.ID
+and sec.semester = 'SEM4'
+
+
+select grade, semester
+from student_section ss,
+section sec
+where ss.sec_id = sec.sec_id
+and ss.student_id = 88
+
+-- No.of Courses available in each sem
+select sec.semester, count(distinct c.course_id)
+from student_section ss,
+section sec,
+course c
+where ss.sec_id = sec.sec_id
+and sec.course_id = c.course_id
+group by sec.semester
+
+-- No.of Courses taken by students each sem
+select sec.semester, count(distinct ss.student_id)
+from student_section ss,
+section sec,
+course c
+where ss.sec_id = sec.sec_id
+and sec.course_id = c.course_id
+group by sec.semester
+
+
+
+select name, salary
+ from instructor
+order by salary desc
