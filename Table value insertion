@@ -1,0 +1,141 @@
+Insert_Scripts.sql
+INSERT INTO bank VALUES( 1, 'PNC Financial Services Group Inc','Chicago');
+INSERT INTO bank VALUES( 2, 'Citigroup Inc','New York');
+INSERT INTO bank VALUES( 3, 'Bank of America Corp','Boston');
+INSERT INTO bank VALUES( 4, 'JPMorgan Chase & Co','LA');
+INSERT INTO bank VALUES( 5, 'Truist Financial Corp','Seattle');
+INSERT INTO bank VALUES( 6, 'Wells Fargo & Co.','Austin');
+INSERT INTO bank VALUES( 7, 'U.S. Bancorp','Dallas');
+INSERT INTO bank VALUES( 8, 'Capital One Financial Corp.','Cleveland');
+INSERT INTO bank VALUES( 9, 'Fifth Third Bank','San Francisco');
+INSERT INTO bank VALUES( 10, 'HSBC','Arizona');
+
+
+INSERT INTO customer_type VALUES('BORR', 'Borrower');
+INSERT INTO customer_type VALUES('DEP', 'Depositor');
+INSERT INTO customer_type VALUES('BORR_DEP', 'Borrower and Depositor');
+
+
+INSERT INTO customer(cust_id, cust_ssn, cust_first_name, cust_last_name, cust_email, cust_address, cust_street, cust_city, cust_state,
+ cust_zipcode, cust_start_date, cust_credit_score, cust_dob, cust_type_code, bank_id) VALUES(111, '2-3-4', 'Sherlock', 'Holmes', 'sherlock.holmes@uic.edu', '211 B', 'Baker Street', 'Chicago', 
+'Illinois', 60601, '2001-01-02', 7, '1993-03-10', 'BORR_DEP', 1);
+INSERT INTO customer(cust_id, cust_ssn, cust_first_name, cust_last_name, cust_email, cust_address, cust_street, cust_city, cust_state,
+ cust_zipcode, cust_start_date, cust_credit_score, cust_dob, cust_type_code, bank_id) VALUES(222, '2-4-8', 'Chandler', 'Bing', 'chandler.bing@uic.edu', '213 E', 'Walker Street', 'New York', 
+'New York', 60602, '2001-11-02', 7, '1994-03-10', 'BORR', 2);
+INSERT INTO customer(cust_id, cust_ssn, cust_first_name, cust_last_name, cust_email, cust_address, cust_street, cust_city, cust_state,
+ cust_zipcode, cust_start_date, cust_credit_score, cust_dob, cust_type_code, bank_id) VALUES(333, '3-3-4', 'Joey', 'Tribbiani', 'joey.tribbiani@uic.edu', '314 B', 'Wacker Dr', 'Boston', 
+'Massachusetts', 40601, '2003-01-01', 7, '1990-01-11', 'DEP', 3);
+INSERT INTO customer(cust_id, cust_ssn, cust_first_name, cust_last_name, cust_email, cust_address, cust_street, cust_city, cust_state,
+ cust_zipcode, cust_start_date, cust_credit_score, cust_dob, cust_type_code, bank_id) VALUES(444, '5-3-4', 'John', 'Smith', 'john.smith@uic.edu', '56 N', 'Harrison St', 'Boston', 
+'Massachusetts', 60701, '2005-03-01', 7, '1989-10-10', 'BORR_DEP', 3);
+INSERT INTO customer(cust_id, cust_ssn, cust_first_name, cust_last_name, cust_email, cust_address, cust_street, cust_city, cust_state,
+ cust_zipcode, cust_start_date, cust_credit_score, cust_dob, cust_type_code, bank_id) VALUES(555, '7-3-4', 'Tom', 'Hanks', 'tom.hanks@uic.edu', '4576 S', 'Halsted Street', 'LA', 
+'California', 66601, '2004-01-01', 7, '1987-01-21', 'DEP', 4);
+INSERT INTO customer(cust_id, cust_ssn, cust_first_name, cust_last_name, cust_email, cust_address, cust_street, cust_city, cust_state,
+ cust_zipcode, cust_start_date, cust_credit_score, cust_dob, cust_type_code, bank_id) VALUES(666, '2-8-4', 'Jim', 'Carrey', 'jim.carrey@uic.edu', '343 W', 'Jackson Street', 'Seattle', 
+'Washington', 65671, '2006-09-01', 7, '1994-01-14', 'BORR', 5);
+INSERT INTO customer(cust_id, cust_ssn, cust_first_name, cust_last_name, cust_email, cust_address, cust_street, cust_city, cust_state,
+ cust_zipcode, cust_start_date, cust_credit_score, cust_dob, cust_type_code, bank_id) VALUES(777, '9-3-4', 'James', 'Bond', 'james.bond@uic.edu', '5677 N', 'Ohio Street', 'Austin', 
+'Texas', 78791, '2001-05-01', 7, '1995-08-10', 'BORR', 6);
+INSERT INTO customer(cust_id, cust_ssn, cust_first_name, cust_last_name, cust_email, cust_address, cust_street, cust_city, cust_state,
+ cust_zipcode, cust_start_date, cust_credit_score, cust_dob, cust_type_code, bank_id) VALUES(888, '2-4-4', 'Jane', 'Smith', 'jane.smith@uic.edu', '4898 E', 'Hubbard Street', 'Dallas', 
+'Texas', 70040, '2000-04-01', 7, '1992-09-01', 'BORR_DEP', 7);
+INSERT INTO customer(cust_id, cust_ssn, cust_first_name, cust_last_name, cust_email, cust_address, cust_street, cust_city, cust_state,
+ cust_zipcode, cust_start_date, cust_credit_score, cust_dob, cust_type_code, bank_id) VALUES(999, '2-3-0', 'Monica', 'Gellar', 'monica.gellar@uic.edu', '888 W', 'Clark Street', 'Cleveland', 
+'Ohio', 78789, '1999-01-01', 7, '1991-04-17', 'BORR_DEP', 8);
+INSERT INTO customer(cust_id, cust_ssn, cust_first_name, cust_last_name, cust_email, cust_address, cust_street, cust_city, cust_state,
+ cust_zipcode, cust_start_date, cust_credit_score, cust_dob, cust_type_code, bank_id) VALUES(101, '5-7-4', 'Rachel', 'Green', 'rachel.green@uic.edu', '3433 E', 'State Street', 'Phoenix', 
+'Arizona', 45637, '2000-01-01', 7, '1990-09-30', 'BORR_DEP', 10);
+INSERT INTO customer(cust_id, cust_ssn, cust_first_name, cust_last_name, cust_email, cust_address, cust_street, cust_city, cust_state,
+ cust_zipcode, cust_start_date, cust_credit_score, cust_dob, cust_type_code, bank_id) VALUES(102, '5-7-4', 'Ross', 'Gellar', 'ross.gellar@uic.edu', '5679 S', 'Washington Street', 'Phoenix', 
+'Arizona', 21313, '2001-01-02', 7, '1994-02-27', 'BORR_DEP', 10);
+INSERT INTO customer(cust_id, cust_ssn, cust_first_name, cust_last_name, cust_email, cust_address, cust_street, cust_city, cust_state,
+ cust_zipcode, cust_start_date, cust_credit_score, cust_dob, cust_type_code, bank_id) VALUES(103, '5-7-4', 'Phoebe', 'Buffay', 'phoebe.buffay@uic.edu', '777 N', 'Westcott Street', 'San Francisco', 
+'California', 11109, '2011-01-01', 7, '1998-11-10', 'BORR_DEP', 9);
+INSERT INTO customer(cust_id, cust_ssn, cust_first_name, cust_last_name, cust_email, cust_address, cust_street, cust_city, cust_state,
+ cust_zipcode, cust_start_date, cust_credit_score, cust_dob, cust_type_code, bank_id) VALUES(104, '9-9-4', 'Jack', 'Ryan', 'jack.ryan@uic.edu', '433 S', 'Euclid Avenue', 'Cleveland', 
+'Ohio', 50091, '2020-06-01', 6, '1999-12-31', 'BORR_DEP', 8);
+
+
+
+INSERT INTO customer_phones VALUES(11, 99876543, 'Office', 111);
+INSERT INTO customer_phones VALUES(22, 23456789, 'Office', 222);
+INSERT INTO customer_phones VALUES(33, 77356489, 'Home', 222);
+INSERT INTO customer_phones VALUES(44, 56879347, 'Personal', 333);
+INSERT INTO customer_phones VALUES(55, 66778855, 'Office', 444);
+INSERT INTO customer_phones VALUES(66, 77889955, 'Personal', 555);
+INSERT INTO customer_phones VALUES(77, 22335544, 'Home', 666);
+INSERT INTO customer_phones VALUES(88, 99884433, 'Office', 777);
+INSERT INTO customer_phones VALUES(99, 11226675, 'Personal', 888);
+INSERT INTO customer_phones VALUES(10, 77665500, 'Personal', 999);
+INSERT INTO customer_phones VALUES(12, 99008877, 'Office', 101);
+INSERT INTO customer_phones VALUES(13, 44553388, 'Home', 102);
+INSERT INTO customer_phones VALUES(14, 66557722, 'Home', 103);
+INSERT INTO customer_phones VALUES(15, 77665009, 'Office', 104);
+INSERT INTO customer_phones VALUES(16, 55669988, 'Personal', 111);
+INSERT INTO customer_phones VALUES(17, 88776622, 'Personal', 444);
+
+
+INSERT INTO account VALUES(2324, 10000.00, '2000-01-01', 100.00, 'SAVINGS', 101, 10);
+INSERT INTO account VALUES(3333, 20000.00, '2001-01-02', 100.00, 'CHECKING', 102, 10);
+INSERT INTO account VALUES(2222, 30000.00, '2011-01-01', 100.00, 'CHECKING', 103, 9);
+INSERT INTO account VALUES(4444, 50000.00, '2020-06-01', 100.00, 'CHECKING', 104, 8);
+INSERT INTO account VALUES(5555, 60000.00, '2001-01-02', 120.00, 'SAVINGS', 111, 1);
+INSERT INTO account VALUES(6666, 70000.00, '2001-11-02', 150.00, 'CHECKING', 222, 2);
+INSERT INTO account VALUES(7777, 80000.00, '2003-01-01', 200.00, 'SAVINGS', 333, 3);
+INSERT INTO account VALUES(8888, 90000.00, '2005-03-01', 100.00, 'CHECKING', 444, 3);
+INSERT INTO account VALUES(9999, 770000.00, '2004-01-01', 500.00, 'SAVINGS', 555, 4);
+INSERT INTO account VALUES(1345, 4000.00, '2006-09-01', 100.00, 'CHECKING', 666, 5);
+INSERT INTO account VALUES(5678, 7000.00, '2001-05-01', 100.00, 'SAVINGS', 777, 6);
+INSERT INTO account VALUES(7896, 20000.00, '2000-04-01', 100.00, 'MONEYM', 888, 7);
+INSERT INTO account VALUES(8089, 890000.00, '1999-01-01', 1000.00, 'MONEYM', 999, 8);
+
+
+INSERT INTO loan VALUES(01, 500000.00, '2040-01-01', 25000.00, 5.67, 2324);
+INSERT INTO loan VALUES(02, 700000.00, '2030-01-01', 5000.00, 3.67, 5555);
+INSERT INTO loan VALUES(03, 900000.00, '2055-01-01', 2500.00, 5.7, 5678);
+INSERT INTO loan VALUES(04, 1000000.00, '2070-01-01', 200000.00, 1.7, 7777);
+INSERT INTO loan VALUES(05, 800000.00, '2050-01-01', 75000.00, 3.87, 9999);
+
+
+INSERT INTO credit_card VALUES(234567, 35000.00, 35000.00, 0.00, 1345);
+INSERT INTO credit_card VALUES(123456, 35000.00, 30000.00, 5000.00, 2222);
+INSERT INTO credit_card VALUES(345678, 35000.00, 32000.00, 3000.00, 2324);
+INSERT INTO credit_card VALUES(298765, 35000.00, 5000.00, 30000.00, 3333);
+INSERT INTO credit_card VALUES(340678, 35000.00, 25000.00, 10000.00, 4444);
+INSERT INTO credit_card VALUES(456789, 35000.00, 10000.00, 25000.00, 5555);
+INSERT INTO credit_card VALUES(567890, 35000.00, 5000.00, 30000.00, 5678);
+INSERT INTO credit_card VALUES(678901, 35000.00, 30000.00, 5000.00, 6666);
+INSERT INTO credit_card VALUES(789012, 35000.00, 15000.00, 20000.00, 6666);
+INSERT INTO credit_card VALUES(890123, 35000.00, 3000.00, 32000.00, 7777);
+INSERT INTO credit_card VALUES(901234, 35000.00, 35000.00, 0.00, 7777);
+
+INSERT INTO investment_serv VALUES(34567, 'MM', 45000.00, '2000-04-01', 1000.00, 48, 7896);
+INSERT INTO investment_serv VALUES(56789, 'MM', 55000.00, '1999-01-01', 2000.00, 72, 8089);
+
+
+INSERT INTO transaction_types VALUES(01,'WITHDRAW');
+INSERT INTO transaction_types VALUES(02,'TRANSACT');
+INSERT INTO transaction_types VALUES(03,'DEPOSIT');
+
+INSERT INTO transactions VALUES(1001, 2000.00, '2022-01-11', 0.00, 1345, 02);
+INSERT INTO transactions VALUES(1002, 4000.00, '2022-02-11', 0.00, 1345, 02);
+INSERT INTO transactions VALUES(1003, 1000.00, '2002-01-11', 10.00, 2222, 01);
+INSERT INTO transactions VALUES(1004, 200.00, '2021-03-11', 0.00, 2222, 02);
+INSERT INTO transactions VALUES(1005, 3000.00, '2002-11-11', 10.00, 2324, 01);
+INSERT INTO transactions VALUES(1006, 12000.00, '1999-01-12', 0.00, 2324, 02);
+INSERT INTO transactions VALUES(1007, 300.00, '2001-05-23', 0.00, 2324, 03);
+INSERT INTO transactions VALUES(1008, 4560.00, '2004-10-24', 10.00, 3333, 01);
+INSERT INTO transactions VALUES(1009, 780.00, '2005-01-27', 0.00, 4444, 03);
+INSERT INTO transactions VALUES(1010, 5678.00, '2006-11-26', 0.00, 5555, 03);
+INSERT INTO transactions VALUES(1011, 9000.00, '2012-09-02', 0.00, 5555, 03);
+INSERT INTO transactions VALUES(1012, 67890.00, '2019-08-19', 10.00, 5678, 01);
+INSERT INTO transactions VALUES(1013, 13245.00, '2017-01-29', 0.00, 5678, 03);
+INSERT INTO transactions VALUES(1014, 12200.00, '2003-06-11', 0.00, 5678, 03);
+INSERT INTO transactions VALUES(1015, 2500.00, '2009-09-30', 10.00, 6666, 01);
+INSERT INTO transactions VALUES(1016, 30000.00, '2011-04-27', 0.00, 6666, 02);
+INSERT INTO transactions VALUES(1017, 1900.00, '2001-05-01', 0.00, 7777, 03);
+INSERT INTO transactions VALUES(1018, 2000.00, '1999-04-01', 0.00, 7896, 03);
+INSERT INTO transactions VALUES(1019, 5600.00, '2014-05-21', 0.00, 8089, 02);
+INSERT INTO transactions VALUES(1020, 6700.00, '2008-03-11', 0.00, 8888, 02);
+INSERT INTO transactions VALUES(1021, 790.00, '2007-07-25', 0.00, 9999, 03);
