@@ -1,0 +1,207 @@
+AlterTableQuery.sql
+ALTER TABLE instructor ADD DateofJoining date;
+
+select * from Instructor;
+
+Update instructor set DateofJoining = '2015-04-01'
+where id = 123;
+Update instructor set DateofJoining = '2001-06-01'
+where id = 138;
+Update instructor set DateofJoining = '2012-12-01'
+where id = 165;
+Update instructor set DateofJoining = '2009-11-01'
+where id = 222;
+Update instructor set DateofJoining = '2010-03-01'
+where id = 275;
+Update instructor set DateofJoining = '2010-07-01'
+where id = 333;
+Update instructor set DateofJoining = '2011-08-01'
+where id = 354;
+Update instructor set DateofJoining = '2011-01-01'
+where id = 365;
+Update instructor set DateofJoining = '2017-01-01'
+where id = 376;
+Update instructor set DateofJoining = '2017-10-01'
+where id = 444;
+Update instructor set DateofJoining = '2019-01-01'
+where id = 456;
+Update instructor set DateofJoining = '2010-09-01'
+where id = 555;
+Update instructor set DateofJoining = '2019-12-01'
+where id = 647;
+Update instructor set DateofJoining = '2020-01-01'
+where id = 666;
+Update instructor set DateofJoining = '2020-03-01'
+where id = 764;
+Update instructor set DateofJoining = '2022-03-01'
+where id = 777;
+Update instructor set DateofJoining = '2022-01-01'
+where id = 789;
+Update instructor set DateofJoining = '2021-02-01'
+where id = 846;
+Update instructor set DateofJoining = '2021-08-01'
+where id = 953;
+
+
+update student_section
+set grade = 'A+' where grade = 'A'
+ALTER TABLE student ADD DateofJoining date;
+
+select * from student;
+
+Update student set DateofJoining = '2022-04-01'
+where id = 10;
+Update student set DateofJoining = '2022-06-01'
+where id = 11;
+Update student set DateofJoining = '2022-12-01'
+where id = 22;
+Update student set DateofJoining = '2021-11-01'
+where id = 33;
+Update student set DateofJoining = '2021-03-01'
+where id = 44;
+Update student set DateofJoining = '2020-07-01'
+where id = 55;
+Update student set DateofJoining = '2020-08-01'
+where id = 66;
+Update student set DateofJoining = '2020-01-01'
+where id = 77;
+Update student set DateofJoining = '2021-01-01'
+where id = 88;
+Update student set DateofJoining = '2019-10-01'
+where id = 99;
+Update student set DateofJoining = '2019-01-01'
+where id = 101;
+Update student set DateofJoining = '2019-09-01'
+where id = 102;
+Update student set DateofJoining = '2018-12-01'
+where id = 103;
+Update student set DateofJoining = '2020-01-01'
+where id = 104;
+Update student set DateofJoining = '2020-03-01'
+where id = 105;
+Update student set DateofJoining = '2022-03-01'
+where id = 106;
+Update student set DateofJoining = '2022-01-01'
+where id = 107;
+Update student set DateofJoining = '2021-02-01'
+where id = 108;
+Update student set DateofJoining = '2021-08-01'
+where id = 109;
+Update student set DateofJoining = '2019-08-01'
+where id = 110;
+
+select * from section where semester = 'SEM1'
+
+INSERT INTO student_section VALUES(10, 34567, 'A+')
+INSERT INTO student_section VALUES(10, 34561, 'A+')  
+INSERT INTO student_section VALUES(10, 34610, 'A+')
+INSERT INTO student_section VALUES(10, 34612, 'A+')
+INSERT INTO student_section VALUES(11, 34565, 'B+')
+INSERT INTO student_section VALUES(22, 34610, 'B+')
+INSERT INTO student_section VALUES(22, 34612, 'B+')
+INSERT INTO student_section VALUES(22, 34562, 'B-')
+INSERT INTO student_section VALUES(22, 34614, 'B-')
+INSERT INTO student_section VALUES(33, 34614, 'B-')
+INSERT INTO student_section VALUES(33, 34566, 'C+')
+INSERT INTO student_section VALUES(44, 34566, 'C+')
+INSERT INTO student_section VALUES(44, 34611, 'C-')
+INSERT INTO student_section VALUES(44, 34613, 'C-')
+INSERT INTO student_section VALUES(44, 34618, 'F')
+INSERT INTO student_section VALUES(55, 34522, 'F')
+INSERT INTO student_section VALUES(55, 34568, 'D+')
+INSERT INTO student_section VALUES(55, 34616, 'D+')
+INSERT INTO student_section VALUES(66, 34569, 'D+')
+INSERT INTO student_section VALUES(66, 34617, 'D-')
+INSERT INTO student_section VALUES(77, 34563, 'D-')
+INSERT INTO student_section VALUES(77, 34611, 'D-')
+INSERT INTO student_section VALUES(77, 34564, 'D+')
+INSERT INTO student_section VALUES(77, 34565, 'A+')
+INSERT INTO student_section VALUES(88, 34564, 'A+')
+INSERT INTO student_section VALUES(88, 34568, 'A+')
+INSERT INTO student_section VALUES(88, 34616, 'A+')
+INSERT INTO student_section VALUES(88, 34563, 'A+')
+INSERT INTO student_section VALUES(88, 34566, 'A+')
+INSERT INTO student_section VALUES(88, 34611, 'A+')
+INSERT INTO student_section VALUES(88, 34613, 'A+')
+INSERT INTO student_section VALUES(88, 34618, 'A+')
+INSERT INTO student_section VALUES(88, 34562, 'B+')
+INSERT INTO student_section VALUES(88, 34614, 'B+')
+INSERT INTO student_section VALUES(88, 34619, 'C+')
+INSERT INTO student_section VALUES(88, 34561, 'C+')
+INSERT INTO student_section VALUES(88, 34610, 'A+')
+INSERT INTO student_section VALUES(88, 34567, 'A+')
+INSERT INTO student_section VALUES(99, 34612, 'A+')
+INSERT INTO student_section VALUES(99, 34567, 'A+')
+INSERT INTO student_section VALUES(101, 34612, 'A+')
+INSERT INTO student_section VALUES(101, 34567, 'A+')
+INSERT INTO student_section VALUES(102, 34566, 'A+')
+INSERT INTO student_section VALUES(102, 34563, 'A+')
+INSERT INTO student_section VALUES(102, 34562, 'A+')
+INSERT INTO student_section VALUES(102, 34561, 'A+')
+INSERT INTO student_section VALUES(102, 34612, 'A+')
+INSERT INTO student_section VALUES(102, 34567, 'A+')
+INSERT INTO student_section VALUES(103, 34561, 'D+')
+INSERT INTO student_section VALUES(103, 34567, 'A+')
+INSERT INTO student_section VALUES(104, 34563, 'A+')
+INSERT INTO student_section VALUES(104, 34561, 'A+')
+INSERT INTO student_section VALUES(104, 34562, 'A+')
+INSERT INTO student_section VALUES(105, 34615, 'A+')
+INSERT INTO student_section VALUES(105, 34616, 'A+')
+INSERT INTO student_section VALUES(105, 34617, 'A+')
+INSERT INTO student_section VALUES(105, 34618, 'A+')
+INSERT INTO student_section VALUES(106, 34615, 'B+')
+INSERT INTO student_section VALUES(106, 34616, 'B+')
+INSERT INTO student_section VALUES(106, 34617, 'B-')
+INSERT INTO student_section VALUES(106, 34618, 'B-')
+INSERT INTO student_section VALUES(106, 34619, 'C+')
+INSERT INTO student_section VALUES(107, 34564, 'C+')
+INSERT INTO student_section VALUES(108, 34561, 'C+')
+INSERT INTO student_section VALUES(108, 34562, 'C-')
+INSERT INTO student_section VALUES(108, 34563, 'C-')
+INSERT INTO student_section VALUES(108, 34564, 'D+')
+INSERT INTO student_section VALUES(108, 34565, 'D+')
+INSERT INTO student_section VALUES(108, 34567, 'D+')
+INSERT INTO student_section VALUES(109, 34619, 'D+')
+INSERT INTO student_section VALUES(110, 34561, 'A+')
+INSERT INTO student_section VALUES(110, 34562, 'A+')
+INSERT INTO student_section VALUES(110, 34567, 'B+')
+
+
+Update student set DateofJoining = '2021-11-01'
+where id = 33;
+Update student set DateofJoining = '2021-03-01'
+where id = 44;
+Update student set DateofJoining = '2020-07-01'
+where id = 55;
+Update student set DateofJoining = '2020-08-01'
+where id = 66;
+Update student set DateofJoining = '2020-01-01'
+where id = 77;
+Update student set DateofJoining = '2021-01-01'
+where id = 88;
+Update student set DateofJoining = '2019-10-01'
+where id = 99;
+Update student set DateofJoining = '2019-01-01'
+where id = 101;
+Update student set DateofJoining = '2019-09-01'
+where id = 102;
+Update student set DateofJoining = '2018-12-01'
+where id = 103;
+Update student set DateofJoining = '2020-01-01'
+where id = 104;
+Update student set DateofJoining = '2020-03-01'
+where id = 105;
+Update student set DateofJoining = '2022-03-01'
+where id = 106;
+Update student set DateofJoining = '2022-01-01'
+where id = 107;
+Update student set DateofJoining = '2021-02-01'
+where id = 108;
+Update student set DateofJoining = '2021-08-01'
+where id = 109;
+Update student set DateofJoining = '2019-08-01'
+where id = 110;
+
+
+alter table instructor add age int;
+select * from instructor;
